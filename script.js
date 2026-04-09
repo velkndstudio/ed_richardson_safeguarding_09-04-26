@@ -7,7 +7,7 @@ document.getElementById('menu-toggle')
 
 window.onload = function() {
   heroSwipe1();
-  ctaAppear();
+  
 };
 
 function heroSwipe1() {
@@ -22,18 +22,19 @@ function heroSwipe1() {
 }
 
 
-
-// Section headings
-
-
 // Slide animations
 
-function slideUp(element, amount) {
+function slideUp(element, amount, pic) {
   element.style.bottom = amount;
+  pic.setAttribute("height", "44px");
+  pic.setAttribute("width", "44px");
+  
 }
 
-function slideDown(element, amount) {
+function slideDown(element, amount, pic) {
   element.style.bottom = amount;
+  pic.setAttribute("height", "42px");
+  pic.setAttribute("width", "42px");
 }
 
 // Areas
@@ -44,15 +45,19 @@ console.log(areaBoxes);
 let areaOverlays = document.getElementsByClassName("area-overlay");
 console.log(areaOverlays);
 
+let icon = document.getElementsByClassName('area-svg');
+console.log(icon);
+
+
 for (let i = 0; i < areaBoxes.length; i++){
   areaBoxes[i].addEventListener('mouseover', function(){
-    slideUp(areaOverlays[i], '0px');
+    slideUp(areaOverlays[i], '0px', icon[i]);
   });
 }
 
 for (let i = 0; i < areaBoxes.length; i++){
   areaBoxes[i].addEventListener('mouseout', function(){
-    slideDown(areaOverlays[i], '-70px');
+    slideDown(areaOverlays[i], '-70px', icon[i]);
   });
 }
 
@@ -89,23 +94,3 @@ for (let i = 0; i < bulletPoints.length; i++){
   });
 }
 
-
-// Testimonials
-
-// let testBoxes = document.getElementsByClassName("testimonial-box");
-// console.log(testBoxes);
-
-// let idBoxes = document.getElementsByClassName("testimonial-id-box");
-// console.log(idBoxes);
-
-// for (let i = 0; i < testBoxes.length; i++){
-//   testBoxes[i].addEventListener('mouseover', function(){
-//     slideUp(idBoxes[i], '80px');
-//   });
-// }
-
-// for (let i = 0; i < testBoxes.length; i++){
-//   testBoxes[i].addEventListener('mouseout', function(){
-//     slideDown(idBoxes[i], '-70px');
-//   });
-// }

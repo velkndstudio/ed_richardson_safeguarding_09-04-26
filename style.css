@@ -316,11 +316,12 @@ header {
 }
 
 .area:hover {
-    /* transform: scale(105%);  */
-    width: 260px;
+    transform: scale(105%); 
+    /* transition: 0.5s; */
+    /* width: 260px;
     height: 260px;
     margin: 5px;
-    font-size: 104%;
+    font-size: 104%; */
     box-shadow: 8px 11px var(--charcoal-blue-shadow);
 }
 
@@ -348,7 +349,7 @@ svg {
 
 /* scroll animations */
 
- @keyframes tileScroll {
+ /* @keyframes tileScroll {
     0%{transform:scale(0.2); opacity: 0;}
     100%{}
 }
@@ -358,8 +359,9 @@ svg {
     animation: tileScroll linear both;
     animation-timeline: view();
     animation-range: 0vh 50vh;
+    
     }
-} 
+}  */
 
 
  @keyframes tileScroll2 {
@@ -369,7 +371,7 @@ svg {
 
 @media (prefers-reduced-motion: no-preference) {
     .bullet-point, .check-svg {
-    animation: tileScroll linear both;
+    animation: tileScroll2 linear both;
     animation-timeline: view();
     animation-range: 0vh 25vh;
     }
@@ -506,16 +508,17 @@ padding-bottom: 25px;
     overflow: hidden;
     /* cursor: pointer; */
     transition: 0.5s;
+   
     
     
 }
 
 .testimonial-box:hover {
-    width: 360px;
+    /* width: 360px;
     height: 260px;
     margin: 5px;
-    font-size: 104%;
-    /* transform: scale(102%); */
+    font-size: 104%; */
+    transform: scale(102%);
     /* background-color: var(--soft-blossom); */
     box-shadow: 8px 11px var(--charcoal-blue-shadow);
 }

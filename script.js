@@ -26,15 +26,15 @@ function heroSwipe1() {
 
 function slideUp(element, amount, pic) {
   element.style.bottom = amount;
-  pic.setAttribute("height", "44px");
-  pic.setAttribute("width", "44px");
+  // pic.setAttribute("height", "44px");
+  // pic.setAttribute("width", "44px");
   
 }
 
 function slideDown(element, amount, pic) {
   element.style.bottom = amount;
-  pic.setAttribute("height", "42px");
-  pic.setAttribute("width", "42px");
+  // pic.setAttribute("height", "42px");
+  // pic.setAttribute("width", "42px");
 }
 
 // Areas

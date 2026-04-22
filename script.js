@@ -1,7 +1,10 @@
-document.getElementById('menu-toggle')
+ document.getElementById('menu-toggle')
 .addEventListener('click', function(){
   document.body.classList.toggle('nav-open');
+  document.getElementById('mobile-menu').classList.toggle('show-mobile-menu');
 });
+
+
 
 // Hero text
 
